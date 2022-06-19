@@ -1,0 +1,77 @@
+/* body {
+  color: white;
+  text-align: center;
+  background-color: cornflowerblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: orange;
+}
+h3 {
+  color: red;
+}
+h5 {
+  color: blue;
+} */
+/* body {
+  margin: 0;
+  padding: 0;
+  background: url(https://miro.medium.com/focal/1200/900/48/18/1*Cy7cIOO7-lw47dL8eAR2_w.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+body{
+  font-family: 'Fascinate', cursive;
+}
+/* div {
+  border: 20px solid red;
+  margin: 20px;
+  color: rgb(65, 65, 211);
+  background-color: #ff66b2;
+  background-color: rgb(255, 102, 178);
+  background-color: rgba(200, 28, 114, 0.5);
+} */
+p {
+  text-align: center;
+  border: 4px dashed grey;
+  color: green;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.red {
+  color: rgb(237, 212, 100);
+}
+.yellow {
+  color: yellow;
+}
+.afternoon {
+  font-family: "Courier New", Courier, monospace;
+}
+.night {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul.a {
+  list-style-type: circle;
+}
+.buzz {
+  height: 300px;
+  width: 500px;
+  border: 10px solid rgb(193, 27, 27);
+}
+.woody {
+  height: 350px;
+  width: 600px;
+  border: 10px dotted blue;
+}
+.highlight {
+  background-color: rgb(224, 176, 16);
+}
+#text {
+  color: aquamarine;
+}
+li {
+  color: red;
+  font-size: 1rem;
+}

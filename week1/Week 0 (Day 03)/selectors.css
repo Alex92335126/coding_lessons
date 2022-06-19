@@ -1,0 +1,19 @@
+p {
+  color: red;
+}
+.lorem {
+  color: purple;
+}
+#Lorem {
+  color: white;
+  background-color: cornflowerblue;
+}
+div.box {
+  border: 2px solid black;
+  height: 300px;
+  width: 600px;
+  background-color: green;
+}
+[href] {
+  color:orange;
+}

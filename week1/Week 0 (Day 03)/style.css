@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.disney img {
+  height: 300px;
+  width: 500px;
+}
+.netflix img{
+    height:800px;
+    width:500px;
+}
+.disney {
+  float:left;
+}
+.netflix{
+    float:right;
+}
+.cleared{
+    clear:both;
+}
