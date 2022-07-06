@@ -1,0 +1,15 @@
+.box {
+    height: 200px;
+    width: 190px;
+    border: 2px solid black;
+  }
+  .buttonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  button {
+    margin: 15px;
+  }
