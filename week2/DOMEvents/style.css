@@ -1,0 +1,53 @@
+.background {
+  background-color: dimgrey;
+}
+
+.circle {
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: grey;
+  animation-name: colorChanger;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.seperator{ 
+  height: 200px;
+  width: 100px;
+}
+
+.box {
+  height: 50vh;
+  width: 20vw;
+  border: 5px solid black;
+  transition: width 5s, height 4s, border-radius 5s;
+  background-color: red;
+  margin: 0 auto;
+  animation-name: colorChanger;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+div:hover {
+  height: 1400px;
+  width: 1400px;
+  border-radius: 50%;
+}
+@keyframes colorChanger {
+  from {
+    background-color: green;
+    background-color: blue;
+    background-color: red;
+    border-radius: 20%;
+  }
+  to {
+    background-color: pink;
+    background-color: yellow;
+    background-color: aqua;
+    border-radius: 40%;
+    border-radius: 50%;
+  }
+}

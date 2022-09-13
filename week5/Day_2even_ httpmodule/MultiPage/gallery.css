@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: coral;
+  padding: 10px;
+}
+.grid-item {
+  background-color: cornflowerblue;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  text-align: center;
+}
+img {
+  height: 200px;
+  width: 250px;
+}

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100&display=swap");
+body {
+  background-color: black;
+  color: white;
+  font-family: "Anek Latin", sans-serif;
+  font-weight: 900;
+}
+.magic-ball {
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: aquamarine;
+  box-shadow: inset -5px -5px 5px rgb(0 0 0 / 60%), -1px 1px 2px rgb(0 0 0 / 4%);
+}
+
+#text {
+    height: 350px;
+    font-size:  20px;
+}
+
+.questionForm{
+    height: 200px;
+    text-align: center;  
+}
+
+.magic-ball:hover {
+    background: linear-gradient(to right, #FC354C, #0ABFBC);
+}
+

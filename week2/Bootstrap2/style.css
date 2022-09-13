@@ -1,0 +1,35 @@
+.circle { 
+    height: 300px; 
+    width: 300px;
+    border: 1px solid red; 
+    border-radius: 50%; 
+    margin: 0 auto;
+    background-color:black;
+    animation-duration: 5s;
+    color: greenyellow;
+    font-weight: 500;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: aqua;
+}
+
+.square {
+    height: 400px;
+    width: 1000px;
+    border: 5px solid orange;
+    background-color: blueviolet;
+    margin: 0 auto;
+}
+
+.square1 {
+    height: 400px;
+    width: 1000px;
+    border: 5px solid red;
+    background-color: blue;
+    margin: 0 auto;
+}

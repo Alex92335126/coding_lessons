@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://dl.dropbox.com/s/hk7c6wqd8cgm8i4/officialstyles.css"
+    />
+  </head>
+
+  <body class="container font2">
+    <br />
+    <div class="row justify-content-center">
+      <h4>Campsites</h4>
+    </div>
+    <div id="content-container"></div>
+    <div id="addCampsite"></div>
+
+    <template id="template">
+      <div class="card" id="info">
+        <div class="card-body">
+          <p class="park"></p>
+          <p class="link"></p>
+          <p class="address"></p>
+          <p class="water"></p>
+        </div>
+      </div>
+      <br />
+    </template>
+    <div id="information"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script async defer>
+      $(document).ready(function () {
+        function templateData(data) {
+          data.forEach((e) => {
+            let eachData = e.properties;
+            console.log("Properties: ", eachData);
+            let park = eachData.countrypark;
+            let link = eachData.website;
+            let address = eachData.address;
+            let water = eachData["Source of water"];
+            let template = document.querySelector("#template");
+            let info = document.querySelector("#information");
+            console.log("Info container: ", info);
+            let container = template.content.querySelectorAll("p");
+            container[0].innerHTML = park;
+            container[1].innerHTML = `<a target="_blank" href=${link}>Link</a>`;
+            container[2].innerHTML = address;
+            container[3].innerHTML = water;
+
+            let clone = document.importNode(template.content, true);
+            console.log("Clone: ", clone);
+            info.appendChild(clone);
+          });
+        }
+        function constructData(data) {
+          let content = "";
+          data.forEach((e) => {
+            let park = e.properties.countrypark;
+            let link = e.properties.website;
+            let address = e.properties.address;
+            content += '<div class="card">';
+            content += '<div class="card-body">';
+            content += `    <br/><label>Address: ${address}</label>`;
+            content += `    <br/><label>Park: ${park}</label>`;
+            content += `<br/> <a href=${link} target="_blank">Link</a>`;
+            content += "</div>";
+            content += "</div>";
+            content += "<br/>";
+          });
+          // Replace all the things in #content-container div with content
+          document.getElementById("content-container").innerHTML = content;
+          content = "";
+        }
+        $.ajax({
+          url: `http://localhost:3000/campsites`,
+          method: "GET",
+        }).done((data) => {
+          //implementation will be replaced
+          templateData(data);
+          // constructData(data)
+        });
+      });
+    </script>
+  </body>
+</html>
